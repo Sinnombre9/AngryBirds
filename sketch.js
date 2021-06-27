@@ -55,22 +55,31 @@ background(fondo);
   Engine.update(engine);
   piso.display();
   peggy1.display();
+  peggy1.score();
   pio1.display();
   box1.display();
   box2.display();
   tronquito1.display();
   box3.display();
   peppa.display();
+  peppa.score();
   peggy2.display();
+  peggy2.score();
   log.display();
   peppa2.display();
+  peppa2.score();
   peppa3.display();
+  peppa3.score();
   Jorge.display();
+  Jorge.score();
   log2.display();
   Jorge2.display();
+  Jorge2.score();
   plataforma.display();
   resortera.display();
-  text("Score" + score, 1160,20);
+  textSize(15)
+  text("Score" + score, 1140,40);
+
 }
 function mouseDragged(){
   Matter.Body.setPosition(pio1.body,{x:mouseX,y:mouseY});
