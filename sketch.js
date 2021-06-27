@@ -22,6 +22,7 @@ var peppa3;
 var log2;
 var Jorge2;
 var resortera;
+var score
 function preload() {
 fondo=loadImage("sprites/bg.png");
 }
@@ -47,7 +48,7 @@ function setup(){
   Jorge2=new LosMarranos(600,140,70,70);
   plataforma=new Piso(70,390,300,300);
   resortera=new Resortera(pio1.body,{x:150,y:80});
-  
+  score=0;
 }
 function draw(){
 background(fondo);
@@ -69,6 +70,7 @@ background(fondo);
   Jorge2.display();
   plataforma.display();
   resortera.display();
+  text("Score" + score, 1160,20);
 }
 function mouseDragged(){
   Matter.Body.setPosition(pio1.body,{x:mouseX,y:mouseY});
