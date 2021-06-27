@@ -23,6 +23,7 @@ var log2;
 var Jorge2;
 var resortera;
 var score
+var gameState; 
 var bg="sprites/bg.png"
 function preload() {
 getbackground();
@@ -50,6 +51,7 @@ function setup(){
   plataforma=new Piso(70,390,300,300);
   resortera=new Resortera(pio1.body,{x:150,y:80});
   score=0;
+  gameState="SLING";
 }
 function draw(){
 background(fondo);
@@ -83,16 +85,21 @@ background(fondo);
 
 }
 function mouseDragged(){
-  Matter.Body.setPosition(pio1.body,{x:mouseX,y:mouseY});
+  if(gameState!="LANZAR"){
+    Matter.Body.setPosition(pio1.body,{x:mouseX,y:mouseY})
+  }
 }
 function mouseReleased(){
   resortera.fly();
+  gameState="LANZAR";
 }
 
 function keyPressed() {
 
 	if (keyCode === 32) {
+    Matter.Body.setPosition(pio1.body,{x:150,y:80})
 		resortera.volver(pio1.body);
+    gameState="SLING"
 	}
 }
 function getbackground(){
