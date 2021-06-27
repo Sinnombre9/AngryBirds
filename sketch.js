@@ -23,8 +23,9 @@ var log2;
 var Jorge2;
 var resortera;
 var score
+var bg="sprites/bg.png"
 function preload() {
-fondo=loadImage("sprites/bg.png");
+getbackground();
 }
 
 function setup(){
@@ -93,4 +94,16 @@ function keyPressed() {
 	if (keyCode === 32) {
 		resortera.volver(pio1.body);
 	}
+}
+function getbackground(){
+  var tiempo=new Date
+  var hora=tiempo.getHours();
+  if(hora>6&&hora<20){
+    bg="sprites/bg.png";
+  }
+  else{
+    bg="sprites/bg2.jpg";
+    }
+    fondo=loadImage(bg);
+  console.log(hora); 
 }
