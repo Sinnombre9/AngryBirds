@@ -1,4 +1,5 @@
 class Dad {
+  //El papá de los pollitos
   constructor(x,y,width,height,angle){
  var options={
   restitution:0.8,
