@@ -5,7 +5,7 @@ class LosMarranos extends Dad {
     this.visibility=255
   }
   score(){
-if(this.visibility<0&&this.visibility>-15){
+if(this.visibility<0&&this.visibility>-55){
   score++;
 }
   }

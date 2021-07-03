@@ -82,6 +82,12 @@ background(fondo);
   resortera.display();
   textSize(15)
   text("Score" + score, 1140,40);
+  if(score>60){
+    textSize(40)
+    stroke("white")
+    strokeWeight(5)
+    text("You Win BABY BIRD",450,200);
+  }
 
 }
 function mouseDragged(){
