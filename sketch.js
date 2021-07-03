@@ -84,9 +84,11 @@ background(fondo);
   text("Score" + score, 1140,40);
   if(score>60){
     textSize(40)
+    push();
     stroke("white")
     strokeWeight(5)
     text("You Win BABY BIRD",450,200);
+    pop();
   }
 
 }
